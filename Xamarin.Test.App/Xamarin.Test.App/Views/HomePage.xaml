@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.Test.App.Views.HomePage"
+             Title="Home Page"
+             BackgroundImage="back.jpg">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,0,10,0">
+                <Entry x:Name="dess" Placeholder="Enter Your Post here ..."></Entry>
+                <Button BackgroundColor="Blue" WidthRequest="50" TextColor="White" Clicked="post_smthing" Text="Post"></Button>
+            </StackLayout>    
+            <StackLayout>
+                <ListView ItemsSource="{Binding PostsList}"  x:Name="listPlatforms"  IsPullToRefreshEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="40"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding username}" TextColor="Blue" LineBreakMode="TailTruncation"></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding date}" Font="Small"  TextColor="Gray" LineBreakMode="TailTruncation"></Label>
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding description}" Font="Small"  TextColor="Black" LineBreakMode="TailTruncation"></Label>
+                                    <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Source="adolescente.png" Aspect="AspectFill"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

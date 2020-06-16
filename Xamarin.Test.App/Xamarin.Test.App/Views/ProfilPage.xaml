@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.Test.App.Views.ProfilPage"
+             BackgroundImage="back.jpg"
+             Title="Profile Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HorizontalOptions="Center" WidthRequest="80" HeightRequest="80" Margin="0,90,0,0" Source="adolescente.png"/>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="Center" 
+                   Margin="0,0,0,30"
+                   x:Name="username"
+                   FontSize="Large"
+                   TextColor="White"
+                HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

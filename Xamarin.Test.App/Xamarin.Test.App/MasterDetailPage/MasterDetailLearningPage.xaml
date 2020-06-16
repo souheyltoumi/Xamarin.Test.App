@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.Test.App.MasterDetailPage.MasterDetailLearningPage">
+  
+    <MasterDetailPage.Master>
+        <ContentPage BackgroundColor="White" Padding="10" Title="Master" Icon="hamburger.png">
+            <StackLayout >
+                <Label  Text="Menu"></Label>
+                <Button  Text="Profile" Image="user.png"  BackgroundColor="Default" Clicked="profile"></Button>
+                <Button  Text="Home" Image="home.png" BackgroundColor="Default" Clicked="home"></Button>
+                <Button  Text="Logout" Image="logout.png" BackgroundColor="Accent" Clicked="Logout"></Button>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundColor="Beige" Padding="10" Title="detail">
+            <StackLayout >
+                <Label Text="MasterPage"></Label>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
